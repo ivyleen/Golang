@@ -6,6 +6,7 @@ func main() {
 	// Constant declarations must be initialized with its fixed value in the declaration:
 	const pi = 3.14159
 
+	// Multiple variable can be marked as consts even if they are not the same data type.
 	const oneMillion, oneThoousand = 1000000, "1000"
 
 	// iota is a keyword that will create a numerical sequence, beggining from iota(0), that increments by one for each named constant in the list.
