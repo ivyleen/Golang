@@ -19,6 +19,11 @@ func main() {
 	// %v - any of the above
 	// %T - data type
 
+	// Explicit variable declaration:
+	var realNumber float64 = 150.323
+	fmt.Printf("realNumber with explicit declaration: %v type %T \n", realNumber, realNumber)
+	
+	// Implicit variable declaration:
 	num := 100
 	pi := 3.1415926536
 
