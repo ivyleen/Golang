@@ -37,6 +37,7 @@ func main() {
 	}
 
 	/////////////////////// Switch cases ///////////////////////
+
 	num := 2
 
 	switch num {
@@ -91,6 +92,7 @@ func main() {
 	}
 
 	/////////////////////// Loops ///////////////////////
+
 	// Loop is a piece of code in a program that automatically repeats.
 	// One complete execution of all statements within a loop is called "iteration", or a "pass".
 	// The length of the loop is controlled by a condition in the loop. While the tested expression is true, the loop continues.
@@ -107,4 +109,24 @@ func main() {
 		}
 	}
 
+	fmt.Println("")
+
+	// Loop while true = while loop in other languages.
+	counter := 1 // already initialized variable
+	for counter <= 5 {
+		fmt.Println("While loop iteration: ", counter)
+		counter++ // incrementing the variable until the for test-expression becomes false
+	}
+
+	// Infinite loop with a test expression contained in the loop body = do-while in other languages
+	i := 10
+	for {
+		fmt.Println("\tCountdown: ", i)
+		i--
+
+		if i < 1 {
+			fmt.Println("\t\tLift off!")
+			break
+		}
+	}
 }
