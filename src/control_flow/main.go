@@ -153,4 +153,23 @@ func main() {
 		}
 	}
 
+	/////////////////////// Go to labels ///////////////////////
+
+	fmt.Println("\nGo to labels")
+
+	// goto keyword allows the program flow to jump to a label at any position in the program code much like a hyperlink on a web page.
+	// This can cause a lot of trouble so it's generally considered bad programming practice.
+
+	// One example of valid usage:
+
+	for i := 1; i <= 3; i++ {
+		for j := 1; j <= 3; j++ {
+			if i == 2 && j == 2 {
+				goto end
+			}
+
+			fmt.Println("Running i =", i, "j = ", j)
+		}
+	}
+end:
 }
