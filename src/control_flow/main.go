@@ -8,47 +8,51 @@ func main() {
 
 	/////////////////////// If - else statements ///////////////////////
 
+	fmt.Println("If - else statements")
+
 	// The else keyword and opening { curly bracket must appear on the same line as the } closing curly bracket of the previous block of statements!
 
 	// Single statement condition.
 	if 'A' == 'A' {
-		fmt.Println("\nCharacters match.")
+		fmt.Println("Characters match.")
 	}
 
 	// Multiple statements condition.
 	if 5 == 5 && 'A' == 'A' {
-		fmt.Println("\nBoth expressions are true.")
+		fmt.Println("Both expressions are true.")
 	}
 
 	// Nested multiple statements condition.
 	if 5 > 1 {
 		if 7 > 2 {
-			fmt.Println("\nBoth expressions are true.")
+			fmt.Println("Both expressions are true.")
 		}
 	}
 
 	// If-else condition.
 	if 5 < 1 {
-		fmt.Println("\n1st condition is true.")
+		fmt.Println("1st condition is true.")
 	} else if 'A' != 'A' {
-		fmt.Println("\n2st condition is true.")
+		fmt.Println("2st condition is true.")
 	} else {
-		fmt.Println("\nBoth conditions are false.")
+		fmt.Println("Both conditions are false.")
 	}
 
 	/////////////////////// Switch cases ///////////////////////
+
+	fmt.Println("\nSwitch cases")
 
 	num := 2
 
 	switch num {
 	case 1:
-		fmt.Println("\nNumber is One.")
+		fmt.Println("Number is One.")
 	case 2:
-		fmt.Println("\nNumber is Two.")
+		fmt.Println("Number is Two.")
 	case 3:
-		fmt.Println("\nNumber is Three.")
+		fmt.Println("Number is Three.")
 	default:
-		fmt.Println("\nNumber is unrecognized.")
+		fmt.Println("Number is unrecognized.")
 	}
 
 	// A switch with number of march-values are to each execute the same statements,
@@ -58,11 +62,11 @@ func main() {
 	case 0:
 	case 1:
 	case 2:
-		fmt.Println("\nLess than three.")
+		fmt.Println("Less than three.")
 	case 3:
-		fmt.Println("\nExactly three.")
+		fmt.Println("Exactly three.")
 	default:
-		fmt.Println("\nGreater than 3 or negative.")
+		fmt.Println("Greater than 3 or negative.")
 	}
 
 	// With characters is a bit different looking switch case:
@@ -71,9 +75,9 @@ func main() {
 
 	switch num {
 	case 'b', 'B':
-		fmt.Println("\nSecond letter in the alphabet.")
+		fmt.Println("Second letter in the alphabet.")
 	default:
-		fmt.Println("\nNot the second letter in the alphabet.")
+		fmt.Println("Not the second letter in the alphabet.")
 	}
 
 	// When a match is found, the switch normally ends, but you can add the fallthrough keyword
@@ -83,15 +87,17 @@ func main() {
 
 	switch ch {
 	case 'a':
-		fmt.Printf("\nAlthough the letter is lower case 'a',")
+		fmt.Printf("Although the letter is lower case 'a',")
 		fallthrough
 	case 'A':
-		fmt.Println("\nThe letter is the first in the alphabet.")
+		fmt.Println("The letter is the first in the alphabet.")
 	default:
-		fmt.Println("\nLetter is unrecognized.")
+		fmt.Println("Letter is unrecognized.")
 	}
 
 	/////////////////////// Loops ///////////////////////
+
+	fmt.Println("\nLoops")
 
 	// Loop is a piece of code in a program that automatically repeats.
 	// One complete execution of all statements within a loop is called "iteration", or a "pass".
@@ -102,14 +108,14 @@ func main() {
 
 	// The iterator of the most outer loop is usually named i, than nested iterator is j, and than k.
 	for i := 1; i <= 5; i++ {
-		fmt.Println("\nOuter loop iteration: ", i)
+		fmt.Println("Outer loop iteration: ", i)
 
 		for j := 1; j <= 5; j++ {
 			fmt.Println("\tInner loop iteration: ", j)
 		}
 	}
 
-	fmt.Println("")
+	fmt.Println("\nWhile loops")
 
 	// Loop while true = while loop in other languages.
 	counter := 1 // already initialized variable
@@ -129,4 +135,22 @@ func main() {
 			break
 		}
 	}
+
+	fmt.Println("\nBreak and continue")
+
+	// Break and continue in loops:
+	for i := 1; i <= 3; i++ {
+		for j := 1; j <= 3; j++ {
+			if i == 3 && j == 2 {
+				fmt.Println("\tContinue when i =", i, "j = ", j)
+			}
+
+			if i == 2 && j == 2 {
+				fmt.Println("\tBreaking when i =", i, "j = ", j)
+			}
+
+			fmt.Println("Running i =", i, "j = ", j)
+		}
+	}
+
 }
