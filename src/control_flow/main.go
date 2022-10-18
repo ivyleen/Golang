@@ -64,10 +64,21 @@ func main() {
 		fmt.Println("\nGreater than 3 or negative.")
 	}
 
+	// With characters is a bit different looking switch case:
+
+	ch := 'b'
+
+	switch num {
+	case 'b', 'B':
+		fmt.Println("\nSecond letter in the alphabet.")
+	default:
+		fmt.Println("\nNot the second letter in the alphabet.")
+	}
+
 	// When a match is found, the switch normally ends, but you can add the fallthrough keyword
 	// as a final statement in any case block to continue to the next case statement.
 
-	ch := 'a'
+	ch = 'a'
 
 	switch ch {
 	case 'a':
@@ -78,4 +89,22 @@ func main() {
 	default:
 		fmt.Println("\nLetter is unrecognized.")
 	}
+
+	/////////////////////// Loops ///////////////////////
+	// Loop is a piece of code in a program that automatically repeats.
+	// One complete execution of all statements within a loop is called "iteration", or a "pass".
+	// The length of the loop is controlled by a condition in the loop. While the tested expression is true, the loop continues.
+	for counter := 1; counter <= 5; counter++ {
+		fmt.Println("Loop iteration: ", counter)
+	}
+
+	// The iterator of the most outer loop is usually named i, than nested iterator is j, and than k.
+	for i := 1; i <= 5; i++ {
+		fmt.Println("\nOuter loop iteration: ", i)
+
+		for j := 1; j <= 5; j++ {
+			fmt.Println("\tInner loop iteration: ", j)
+		}
+	}
+
 }
