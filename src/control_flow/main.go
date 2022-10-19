@@ -6,8 +6,20 @@ func main() {
 	// Conditional branching - fundamental programming technique that
 	// offers the program two directions in which to proceed, depending on the results of the evaluation.
 
-	/////////////////////// If - else statements ///////////////////////
+	IfElseExample()
 
+	switchCaseExample()
+
+	LoopExample()
+
+	LabelExample()
+}
+
+// Functions: the functions below are functions that don't return anything as a value.
+// If a function returns a value than the function will look more or less like this:
+// func <name of the function>() <return type> {}
+
+func IfElseExample() {
 	fmt.Println("If - else statements")
 
 	// The else keyword and opening { curly bracket must appear on the same line as the } closing curly bracket of the previous block of statements!
@@ -37,9 +49,9 @@ func main() {
 	} else {
 		fmt.Println("Both conditions are false.")
 	}
+}
 
-	/////////////////////// Switch cases ///////////////////////
-
+func switchCaseExample() {
 	fmt.Println("\nSwitch cases")
 
 	num := 2
@@ -94,9 +106,9 @@ func main() {
 	default:
 		fmt.Println("Letter is unrecognized.")
 	}
+}
 
-	/////////////////////// Loops ///////////////////////
-
+func LoopExample() {
 	fmt.Println("\nLoops")
 
 	// Loop is a piece of code in a program that automatically repeats.
@@ -152,9 +164,9 @@ func main() {
 			fmt.Println("Running i =", i, "j = ", j)
 		}
 	}
+}
 
-	/////////////////////// Go to labels ///////////////////////
-
+func LabelExample() {
 	fmt.Println("\nGo to labels")
 
 	// goto keyword allows the program flow to jump to a label at any position in the program code much like a hyperlink on a web page.
