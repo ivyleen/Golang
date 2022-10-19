@@ -8,7 +8,7 @@ func main() {
 
 	IfElseExample()
 
-	switchCaseExample()
+	SwitchCaseExample()
 
 	LoopExample()
 
@@ -51,7 +51,7 @@ func IfElseExample() {
 	}
 }
 
-func switchCaseExample() {
+func SwitchCaseExample() {
 	fmt.Println("\nSwitch cases")
 
 	num := 2
