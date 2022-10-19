@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// Global variable, you can't assign a value to it here.
+var deckSize int
+
 func main() {
 	// Naming rules:
 	// NO keywords, arithmetic operators, punctuation characters or spaces
@@ -22,7 +25,7 @@ func main() {
 	// Explicit variable declaration:
 	var realNumber float64 = 150.323
 	fmt.Printf("realNumber with explicit declaration: %v type %T \n", realNumber, realNumber)
-	
+
 	// Implicit variable declaration:
 	num := 100
 	pi := 3.1415926536
@@ -36,4 +39,8 @@ func main() {
 	fmt.Printf("Pi is approximately %1.10f \n", pi)
 	fmt.Printf("Right-aligned %20.3f rounded pi \n", pi)
 	fmt.Printf("Left-aligned %-20.4f rounded pi", pi)
+
+	// Declaring a variable and later on define it. That works with local variables as well.
+	deckSize = 52
+	fmt.Println("\nDeck size is:", deckSize)
 }
