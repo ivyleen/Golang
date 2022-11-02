@@ -8,11 +8,17 @@ func main() {
 
 	IfElseExample()
 
-	SwitchCaseExample()
+	num := 5
+
+	fmt.Println("Passing by value num in main func before SwitchCaseExample: ", num)
+
+	SwitchCaseExample(num, 'b')
 
 	LoopExample()
 
-	LabelExample()
+	fmt.Println("Confirming that num in main func hasn't changed before LabelExample: ", num)
+
+	LabelExample(num)
 }
 
 // Functions: the functions below are functions that don't return anything as a value.
@@ -51,10 +57,8 @@ func IfElseExample() {
 	}
 }
 
-func SwitchCaseExample() {
+func SwitchCaseExample( num int, ch byte) {
 	fmt.Println("\nSwitch cases")
-
-	num := 2
 
 	switch num {
 	case 1:
@@ -83,9 +87,7 @@ func SwitchCaseExample() {
 
 	// With characters is a bit different looking switch case:
 
-	ch := 'b'
-
-	switch num {
+	switch ch {
 	case 'b', 'B':
 		fmt.Println("Second letter in the alphabet.")
 	default:
@@ -106,6 +108,9 @@ func SwitchCaseExample() {
 	default:
 		fmt.Println("Letter is unrecognized.")
 	}
+
+	num -= 2
+	fmt.Println("Num changed inside of SwitchCaseExample: ", num)
 }
 
 func LoopExample() {
@@ -166,7 +171,7 @@ func LoopExample() {
 	}
 }
 
-func LabelExample() {
+func LabelExample(max int) {
 	fmt.Println("\nGo to labels")
 
 	// goto keyword allows the program flow to jump to a label at any position in the program code much like a hyperlink on a web page.
@@ -174,8 +179,8 @@ func LabelExample() {
 
 	// One example of valid usage:
 
-	for i := 1; i <= 3; i++ {
-		for j := 1; j <= 3; j++ {
+	for i := 1; i <= max; i++ {
+		for j := 1; j <= max; j++ {
 			if i == 2 && j == 2 {
 				goto end
 			}
@@ -185,3 +190,4 @@ func LabelExample() {
 	}
 end:
 }
+
